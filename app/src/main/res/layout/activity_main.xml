@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:id="@+id/toolbar"
+        android:background="@drawable/rounded_white">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/dashboard"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_toEndOf="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:textSize="15dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorBlack"
+            android:text="Mizoram Dashboard"
+            android:layout_toRightOf="@+id/toolbar_icon"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/toolbar_menu"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/menu"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/toolbar_profile"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/toolbar_menu"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/profile"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/dashboard"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/rounded_white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/confirmed_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/positive" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/confirmed_details"
+                    android:layout_toEndOf="@id/confirmed_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/confirmed_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Confirmed Cases"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/confirmed_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="0"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/deceased_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/awaited" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/deceased_details"
+                    android:layout_toEndOf="@id/deceased_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/deceased_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Decreased"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/deceased_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="0"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/tested_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/test_cases" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tested_details"
+                    android:layout_toEndOf="@id/tested_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tested_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Tested"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/tested_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="0"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/cured_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cured" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/cured_details"
+                    android:layout_toEndOf="@id/cured_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/cured_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Cured"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/cured_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="0"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </GridLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/grid"
+        android:layout_below="@+id/dashboard"
+        android:background="@drawable/main_grid"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/grid_view"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
