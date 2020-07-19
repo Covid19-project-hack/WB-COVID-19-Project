@@ -15,10 +15,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.mzcovid19project.Adapter.FAQAdapter;
-import com.mzcovid19project.Adapter.TestLabsAdapter;
-import com.mzcovid19project.Models.FAQ;
-import com.mzcovid19project.Models.Test_Labs;
+import com.wbcovid19project.Adapter.FAQAdapter;
+import com.wbcovid19project.Adapter.TestLabsAdapter;
+import com.wbcovid19project.Models.FAQ;
+import com.wbcovid19project.Models.Test_Labs;
 
 import org.json.JSONArray;
 import org.json.JSONException;

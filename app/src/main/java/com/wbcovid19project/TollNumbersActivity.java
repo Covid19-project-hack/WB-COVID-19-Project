@@ -72,7 +72,7 @@ public class TollNumbersActivity extends AppCompatActivity{
     }
 
     private void parseJSON(String url1) {
-        JsonObjectRequest request = new JsonObjectRequest("https://firebasestorage.googleapis.com/v0/b/mn-covid-19-project.appspot.com/o/toll_numbers.json?alt=media&token=cae15477-21cb-4f8f-9f7d-16d524cf8d11", null,
+        JsonObjectRequest request = new JsonObjectRequest("https://firebasestorage.googleapis.com/v0/b/wb-covid-19-project.appspot.com/o/toll_numbers.json?alt=media&token=9ddd46f2-ef7f-411a-b5da-b94380918132", null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

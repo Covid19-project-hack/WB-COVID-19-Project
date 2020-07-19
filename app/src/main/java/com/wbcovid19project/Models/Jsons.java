@@ -3,12 +3,12 @@ package com.wbcovid19project.Models;
 public class Jsons {
 
     String videos, home_treatment_images, home_treatment_links, toll_numbers, lab_test, donate,
-            tweets, faq, epass, tracker, migrant, corona, cbse, vocational_education, go;
+            tweets, faq, epass, tracker, migrant, corona, cbse, vocational_education, go,health_cares;
 
     public Jsons() {
     }
 
-    public Jsons(String videos, String home_treatment_images, String home_treatment_links, String toll_numbers, String lab_test, String donate, String tweets, String faq, String epass, String tracker, String migrant, String corona, String cbse, String vocational_education, String go) {
+    public Jsons(String videos, String home_treatment_images, String home_treatment_links, String toll_numbers, String lab_test, String donate, String tweets, String faq, String epass, String tracker, String migrant, String corona, String cbse, String vocational_education, String go, String health_cares) {
         this.videos = videos;
         this.home_treatment_images = home_treatment_images;
         this.home_treatment_links = home_treatment_links;
@@ -24,6 +24,7 @@ public class Jsons {
         this.cbse = cbse;
         this.vocational_education = vocational_education;
         this.go = go;
+        this.health_cares = health_cares;
     }
 
     public String getVideos() {
@@ -144,5 +145,13 @@ public class Jsons {
 
     public void setGo(String go) {
         this.go = go;
+    }
+
+    public String getHealth_cares() {
+        return health_cares;
+    }
+
+    public void setHealth_cares(String health_cares) {
+        this.health_cares = health_cares;
     }
 }

@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.wbcovid19project.HealthCareActivity;
 import com.wbcovid19project.MedicalStoresActivity;
 import com.wbcovid19project.OrphanageSupport.FreeFoodActivity;
 import com.wbcovid19project.TollNumbersActivity;
@@ -102,7 +101,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ImageViewHolde
                                 break;
 
                             case 4:
-                                Intent healthcareintent = new Intent(mContext, HealthCareActivity.class);
+                                Intent healthcareintent = new Intent(Intent.ACTION_VIEW);
+                                healthcareintent.setData(Uri.parse(jsons.getHealth_cares()));
                                 mContext.startActivity(healthcareintent);
                                 break;
 
@@ -152,30 +152,24 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ImageViewHolde
                                 break;
 
                             case 14:
-                                Intent migrantintent = new Intent(Intent.ACTION_VIEW);
-                                migrantintent.setData(Uri.parse(jsons.getMigrant()));
-                                mContext.startActivity(migrantintent);
-                                break;
-
-                            case 15:
                                 Intent educationintent = new Intent(mContext, OnlineEducationActivity.class);
                                 educationintent.putExtra("cbse",jsons.getCbse());
                                 educationintent.putExtra("vc",jsons.getVocational_education());
                                 mContext.startActivity(educationintent);
                                 break;
 
-                            case 16:
+                            case 15:
                                 Intent intent20 = new Intent(Intent.ACTION_VIEW);
                                 intent20.setData(Uri.parse(jsons.getGo()));
                                 mContext.startActivity(intent20);
                                 break;
 
-                            case 17:
+                            case 16:
                                 Intent tweetintent = new Intent(mContext, TweetsActivity.class);
                                 tweetintent.putExtra("url", jsons.getTweets());
                                 mContext.startActivity(tweetintent);
                                 break;
-                            case 18:
+                            case 17:
                                 Intent faqintent = new Intent(mContext, FAQsActivity.class);
                                 faqintent.putExtra("url", jsons.getFaq());
                                 mContext.startActivity(faqintent);

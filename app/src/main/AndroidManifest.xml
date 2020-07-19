@@ -132,19 +132,6 @@
             android:label="TN Corona Status"
             android:screenOrientation="unspecified" />
         <activity
-            android:name=".HealthCareListActivity"
-            android:label="Health Care Centers"
-            android:theme="@style/AppThemeOrphanage">
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".HealthCareActivity" />
-        <activity
             android:name=".TollNumbersActivity"
             android:label="Toll Numbers"
             android:screenOrientation="unspecified" />
